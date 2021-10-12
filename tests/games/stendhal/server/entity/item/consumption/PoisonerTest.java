@@ -23,6 +23,7 @@ import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPWorld;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.item.ConsumableItem;
+import games.stendhal.server.entity.item.scroll.MarkedScroll;
 import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.entity.status.StatusType;
 import games.stendhal.server.maps.MockStendlRPWorld;
@@ -61,6 +62,35 @@ public class PoisonerTest {
 		final Player bob = PlayerTestHelper.createPlayer("player");
 		poisoner.feed(c200_1, bob);
 		assertTrue(bob.hasStatus(StatusType.POISONED));
+	}
+	
+	/**
+	 * Tests that you cannot teleport while poisoned.
+	 */
+	@Test
+	public void cantTeleportWhilePoisoned() {
+		SingletonRepository.getEntityManager();
+		ItemTestHelper.generateRPClasses();
+		PlayerTestHelper.generatePlayerRPClasses();
+		final Map<String, String> attributes = new HashMap<String, String>();
+		attributes.put("amount", "1");
+		attributes.put("regen", "1");
+		attributes.put("frequency", "1");
+		attributes.put("id", "1");
+		final StendhalRPWorld testWorld = SingletonRepository.getRPWorld();
+		final StendhalRPZone testZone = new StendhalRPZone("testZone");
+		testWorld.addRPZone(testZone);
+		final ConsumableItem c200_1 = new ConsumableItem("cheese", "", "", attributes);
+		testZone.add(c200_1);
+		final Poisoner poisoner = new Poisoner();
+		final Player sam = PlayerTestHelper.createPlayer("player");
+		testZone.add(sam);
+		poisoner.feed(c200_1, sam);
+		final MarkedScroll nalwor_scroll = (MarkedScroll) SingletonRepository.getEntityManager().getItem("nalwor city scroll");
+		testZone.add(nalwor_scroll);
+		nalwor_scroll.setBoundTo("player");
+		assertTrue(nalwor_scroll.onUsed(sam));
+		
 	}
 
 }
