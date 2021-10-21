@@ -24,6 +24,8 @@ import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.core.events.TeleportNotifier;
 import games.stendhal.server.entity.player.Player;
 
+import games.stendhal.server.entity.status.StatusType;
+
 /**
  * Represents a marked teleport scroll.
  */
@@ -68,6 +70,14 @@ public class MarkedScroll extends TeleportScroll {
 		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_semos_city");
 		int x = 30;
 		int y = 40;
+		
+		/*
+		 * Prevents player from using marked scroll if they are poisoned.
+		 */
+		if (player.hasStatus(StatusType.POISONED)) {
+			player.sendPrivateText("You are much too confused to use a teleport scroll right now!");
+			return false;
+		}
 
 		/*
 		 * Marked scrolls have a destination which is stored in the infostring,
@@ -90,6 +100,7 @@ public class MarkedScroll extends TeleportScroll {
 							+ " to Semos instead");
 				} else {
 					if (player.getKeyedSlot("!visited", zoneName) == null) {
+						
 						player.sendPrivateText("Although you have heard a lot of rumors about the destination, "
 								+ "you cannot concentrate on it because you have never been there.");
 						return false;
@@ -97,6 +108,7 @@ public class MarkedScroll extends TeleportScroll {
 					        zone = temp;
 					        x = Integer.parseInt(st.nextToken());
 							y = Integer.parseInt(st.nextToken());
+							
 						if (!zone.isTeleportInAllowed(x, y)) {
 							player.sendPrivateText("The strong anti magic aura in the destination area prevents the scroll from working!");
 							return false;

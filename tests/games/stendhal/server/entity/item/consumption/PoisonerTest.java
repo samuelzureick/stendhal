@@ -11,6 +11,7 @@
  ***************************************************************************/
 package games.stendhal.server.entity.item.consumption;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.HashMap;
@@ -30,6 +31,7 @@ import games.stendhal.server.maps.MockStendlRPWorld;
 import marauroa.common.Log4J;
 import utilities.PlayerTestHelper;
 import utilities.RPClass.ItemTestHelper;
+
 
 public class PoisonerTest {
 
@@ -72,24 +74,36 @@ public class PoisonerTest {
 		SingletonRepository.getEntityManager();
 		ItemTestHelper.generateRPClasses();
 		PlayerTestHelper.generatePlayerRPClasses();
-		final Map<String, String> attributes = new HashMap<String, String>();
-		attributes.put("amount", "1");
-		attributes.put("regen", "1");
-		attributes.put("frequency", "1");
-		attributes.put("id", "1");
+
 		final StendhalRPWorld testWorld = SingletonRepository.getRPWorld();
-		final StendhalRPZone testZone = new StendhalRPZone("testZone");
+		final StendhalRPZone testZone = new StendhalRPZone("0_fado_city", 40, 30);
+		final StendhalRPZone endZone = new StendhalRPZone("0_nalwor_city", 40, 60);
 		testWorld.addRPZone(testZone);
-		final ConsumableItem c200_1 = new ConsumableItem("cheese", "", "", attributes);
+		testWorld.addRPZone(endZone);
+
+		final Map<String, String> attributeList = new HashMap<String, String>();
+		attributeList.put("amount", "1000");
+		attributeList.put("regen", "200");
+		attributeList.put("frequency", "1");
+		attributeList.put("id", "1");
+		final ConsumableItem c200_1 = new ConsumableItem("cheese", "", "", attributeList);
 		testZone.add(c200_1);
-		final Poisoner poisoner = new Poisoner();
+		 
 		final Player sam = PlayerTestHelper.createPlayer("player");
 		testZone.add(sam);
+		sam.setKeyedSlot("!visited", "0_nalwor_city", "1");
+		final MarkedScroll scroll = (MarkedScroll) SingletonRepository.getEntityManager().getItem("nalwor city scroll");
+	
+		scroll.setInfoString("0_nalwor_city 40 60");
+		 
+		testZone.add(scroll);
+		
+		final Poisoner poisoner = new Poisoner();
 		poisoner.feed(c200_1, sam);
-		final MarkedScroll nalwor_scroll = (MarkedScroll) SingletonRepository.getEntityManager().getItem("nalwor city scroll");
-		testZone.add(nalwor_scroll);
-		nalwor_scroll.setBoundTo("player");
-		assertTrue(nalwor_scroll.onUsed(sam));
+		
+		scroll.setBoundTo("player");
+
+		assertFalse(scroll.onUsed(sam));
 		
 	}
 
