@@ -71,6 +71,7 @@ public class PoisonerTest {
 	 */
 	@Test
 	public void cantTeleportWhilePoisoned() {
+		// arrange
 		SingletonRepository.getEntityManager();
 		ItemTestHelper.generateRPClasses();
 		PlayerTestHelper.generatePlayerRPClasses();
@@ -91,19 +92,18 @@ public class PoisonerTest {
 		 
 		final Player sam = PlayerTestHelper.createPlayer("player");
 		testZone.add(sam);
-		sam.setKeyedSlot("!visited", "0_nalwor_city", "1");
+		sam.setKeyedSlot("!visited", "0_nalwor_city", "1"); // you can only successfully teleport to places you have visited
 		final MarkedScroll scroll = (MarkedScroll) SingletonRepository.getEntityManager().getItem("nalwor city scroll");
-	
 		scroll.setInfoString("0_nalwor_city 40 60");
 		 
+		// act
 		testZone.add(scroll);
-		
 		final Poisoner poisoner = new Poisoner();
 		poisoner.feed(c200_1, sam);
 		
 		scroll.setBoundTo("player");
-
-		assertFalse(scroll.onUsed(sam));
+		// assert
+		assertFalse(scroll.onUsed(sam)); // onUsed uses the scroll, returning false if you fail to use the scroll
 		
 	}
 
