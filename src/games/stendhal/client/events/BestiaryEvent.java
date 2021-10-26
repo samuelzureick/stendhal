@@ -55,7 +55,7 @@ public class BestiaryEvent extends Event<RPEntity> {
 					Dimension screenSize = GameScreen.get().getSize();
 					int maxPreferredWidth = screenSize.width - 80;
 
-					final StringBuilder headerText = new StringBuilder("\"???\" = unknown");
+					final StringBuilder headerText = new StringBuilder("");
 					JLabel header = new JLabel();
 					header.setBorder(BorderFactory.createEmptyBorder(PAD, PAD, PAD, PAD));
 					add(header, BorderLayout.NORTH);
