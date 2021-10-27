@@ -203,7 +203,8 @@ public class BestiaryEvent extends RPEvent {
 
 			// hide the names of creatures not killed by player
 			if (!solo && !shared) {
-				name = "???";
+				//name = "???";
+				continue;
 			}
 
 			if (rare) {

@@ -11,6 +11,7 @@
  ***************************************************************************/
 package games.stendhal.server.entity.item.consumption;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.HashMap;
@@ -23,12 +24,14 @@ import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPWorld;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.item.ConsumableItem;
+import games.stendhal.server.entity.item.scroll.MarkedScroll;
 import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.entity.status.StatusType;
 import games.stendhal.server.maps.MockStendlRPWorld;
 import marauroa.common.Log4J;
 import utilities.PlayerTestHelper;
 import utilities.RPClass.ItemTestHelper;
+
 
 public class PoisonerTest {
 
@@ -61,6 +64,47 @@ public class PoisonerTest {
 		final Player bob = PlayerTestHelper.createPlayer("player");
 		poisoner.feed(c200_1, bob);
 		assertTrue(bob.hasStatus(StatusType.POISONED));
+	}
+	
+	/**
+	 * Tests that you cannot teleport while poisoned.
+	 */
+	@Test
+	public void cantTeleportWhilePoisoned() {
+		// arrange
+		SingletonRepository.getEntityManager();
+		ItemTestHelper.generateRPClasses();
+		PlayerTestHelper.generatePlayerRPClasses();
+
+		final StendhalRPWorld testWorld = SingletonRepository.getRPWorld();
+		final StendhalRPZone testZone = new StendhalRPZone("0_fado_city", 40, 30);
+		final StendhalRPZone endZone = new StendhalRPZone("0_nalwor_city", 40, 60);
+		testWorld.addRPZone(testZone);
+		testWorld.addRPZone(endZone);
+
+		final Map<String, String> attributeList = new HashMap<String, String>();
+		attributeList.put("amount", "1000");
+		attributeList.put("regen", "200");
+		attributeList.put("frequency", "1");
+		attributeList.put("id", "1");
+		final ConsumableItem c200_1 = new ConsumableItem("cheese", "", "", attributeList);
+		testZone.add(c200_1);
+		 
+		final Player sam = PlayerTestHelper.createPlayer("player");
+		testZone.add(sam);
+		sam.setKeyedSlot("!visited", "0_nalwor_city", "1"); // you can only successfully teleport to places you have visited
+		final MarkedScroll scroll = (MarkedScroll) SingletonRepository.getEntityManager().getItem("nalwor city scroll");
+		scroll.setInfoString("0_nalwor_city 40 60");
+		 
+		// act
+		testZone.add(scroll);
+		final Poisoner poisoner = new Poisoner();
+		poisoner.feed(c200_1, sam);
+		
+		scroll.setBoundTo("player");
+		// assert
+		assertFalse(scroll.onUsed(sam)); // onUsed uses the scroll, returning false if you fail to use the scroll
+		
 	}
 
 }
