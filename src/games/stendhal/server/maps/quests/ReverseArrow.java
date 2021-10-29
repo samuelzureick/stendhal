@@ -562,4 +562,20 @@ public class ReverseArrow extends AbstractQuest implements
 	public String getRegion() {
 		return Region.SEMOS_SURROUNDS;
 	}
+	
+	public boolean testAccessCheck() {
+		ReverseArrowCheck testCheck = new ReverseArrowCheck();
+		return testCheck.checkBoard();
+	}
+	
+	public void genTest() {
+		tokens = new LinkedList<Token>();
+		addTokenToWorld(OFFSET_X + 2, OFFSET_Y);
+		addTokenToWorld(OFFSET_X + 1, OFFSET_Y + 1);
+		addTokenToWorld(OFFSET_X + 3, OFFSET_Y + 1);
+		for (int i = 0; i < 5; i++) {
+			addTokenToWorld(OFFSET_X + i, OFFSET_Y + 2);
+		}
+	}
+
 }

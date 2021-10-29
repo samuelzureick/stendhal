@@ -71,6 +71,19 @@ public class ReverseArrowTest {
 		ReverseArrow arrowquest = new ReverseArrow();
 		arrowquest.addToWorld();
 	}
+	
+	/**
+	 * Tests for checkBoard logic
+	 */
+	@Test
+	public void testCheckBoard() {
+		ReverseArrow arrowquest = new ReverseArrow();
+		arrowquest.addToWorld();
+		arrowquest.genTest();
+		arrowquest.testAccessCheck();
+		assertEquals(true, arrowquest.testAccessCheck());
+		}
+
 
 	/**
 	 * Tests for finish.
