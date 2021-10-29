@@ -133,11 +133,40 @@ public class ReverseArrow extends AbstractQuest implements
 			// * * 0 * *
 			// * 1 2 3 *
 			// 4 5 6 7 8
+			
+			// strategy 2:
+			// * * 0 * *
+			// * 1 * 2 *
+			// 3 4 5 6 7
+			// * * 8 * *
 
 			// get the position of the topmost token
 			final int topX = tokens.get(0).getX();
 			final int topY = tokens.get(0).getY();
-
+			
+			// get the position of the lowest token,
+			// relative to topmost
+			final int lowX = tokens.get(8).getX();
+			final int lowY = tokens.get(8).getY();
+			
+			if ((lowY == topY - 3) && (topX == lowX)) {
+				for (int i = 1; i <= 2; i++) {
+					final Token token = tokens.get(i);
+					if ((token.getX() != topX - 1
+							&& token.getX() != topX + 1)
+							|| token.getY() != topY + 1) {
+						return false;
+					}
+				}
+				for (int i = 3; i <= 7; i++) {
+					final Token token = tokens.get(i);
+					if (token.getX() != topX - 2 + i - 4
+							|| token.getY() != topY + 2) {
+						return false;
+					}
+				}
+			}
+			
 			// check first row
 			for (int i = 1; i <= 3; i++) {
 				final Token token = tokens.get(i);
@@ -562,4 +591,20 @@ public class ReverseArrow extends AbstractQuest implements
 	public String getRegion() {
 		return Region.SEMOS_SURROUNDS;
 	}
+	
+	public boolean testAccessCheck() {
+		ReverseArrowCheck testCheck = new ReverseArrowCheck();
+		return testCheck.checkBoard();
+	}
+	
+	public void genTest() {
+		tokens = new LinkedList<Token>();
+		addTokenToWorld(OFFSET_X + 2, OFFSET_Y);
+		addTokenToWorld(OFFSET_X + 1, OFFSET_Y + 1);
+		addTokenToWorld(OFFSET_X + 3, OFFSET_Y + 1);
+		for (int i = 0; i < 5; i++) {
+			addTokenToWorld(OFFSET_X + i, OFFSET_Y + 2);
+		}
+	}
+
 }
