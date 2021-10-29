@@ -201,3 +201,19 @@ Notable contributors:
 - SnowFlake
   · Maps maker
   · NPCs
+- Lily Nicholson
+  · Test Developer
+- Celine Tandiono
+  · Test Developer
+- Eduardt Nica
+  · Test Developer
+- Awais Ahmed
+  · Test Developer
+- Peter Hamer
+  · Test Developer
+- Antonia Holyland
+  · Test Developer
+- Samuel Zureick
+  · Test Developer
+
+  
