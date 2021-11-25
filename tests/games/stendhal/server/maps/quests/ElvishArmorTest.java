@@ -32,7 +32,6 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.SpeakerNPC;
@@ -165,52 +164,6 @@ public class ElvishArmorTest {
 		}
 	}
 
-
-
-	/**
-	 * Player says he the name of a required item he has not got.
-	 */
-	@Test
-	public void testQuestion1ToQuestion1NeededITems() {
-		for (final String playerSays : NEEDEDITEMS) {
-
-			final Player player = PlayerTestHelper.createPlayer("bob");
-			npcEngine.setCurrentState(QUESTION_1);
-
-			npcEngine.step(player, playerSays);
-
-			assertThat(playerSays, npcEngine.getCurrentState(), is(QUESTION_1));
-			assertThat(playerSays, getReply(npc), is("Liar! You don't really have "
-					+ Grammar.a_noun(playerSays)	+ " with you."));
-		}
-	}
-
-	/**
-	 * Player says the name of a required item he has got.
-	 * and repeats it (brings it twice).
-	 */
-	@Test
-	public void testQuestion1ToQuestion1NeededITemsGot() {
-		for (final String playerSays : NEEDEDITEMS) {
-			final Player player = PlayerTestHelper.createPlayer("bob");
-
-			PlayerTestHelper.equipWithItem(player, playerSays);
-			npcEngine.setCurrentState(QUESTION_1);
-
-			npcEngine.step(player, playerSays);
-
-			assertThat(playerSays, npcEngine.getCurrentState(), is(QUESTION_1));
-			assertThat(playerSays, getReply(npc), is("Excellent work. Is there more that you plundered?"));
-
-			PlayerTestHelper.equipWithItem(player, playerSays);
-			npcEngine.setCurrentState(QUESTION_1);
-
-			npcEngine.step(player, playerSays);
-
-			assertThat(playerSays, getReply(npc), is("You've already brought that elvish item to me."));
-			assertThat(playerSays, npcEngine.getCurrentState(), is(QUESTION_1));
-		}
-	}
 
 	/**
 	 * Player brings all items.
