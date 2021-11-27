@@ -69,7 +69,7 @@ public class CheekyMonkeyTest {
 	}
 	
 	@Test
-	public void testCheekyMonkeyTracking() {
+	public void testCheekyMonkeyTrackingOnCreature() {
 		final StendhalRPZone zone = new StendhalRPZone("zone");
 		final Player bob = PlayerTestHelper.createPlayer("bob");
 		final CheekyMonkey curiousGeorge = new CheekyMonkey(bob);
@@ -85,9 +85,27 @@ public class CheekyMonkeyTest {
 		curiousGeorge.attemptSteal(curiousGeorge.getNearbyCreature(100));
 		
 		assertTrue(curiousGeorge.hasTargetMoved());
+	}
+	
+	@Test
+	public void testCheekyMonkeyTrackingOnPlayer() {
+		final StendhalRPZone zone = new StendhalRPZone("zone");
+		final Player bob = PlayerTestHelper.createPlayer("bob");
+		final Player ross = PlayerTestHelper.createPlayer("ross");
 		
+		final CheekyMonkey curiousGeorge = new CheekyMonkey(bob);
 		
+		zone.add(bob);
+		zone.add(ross);
+		zone.add(curiousGeorge);
 		
+		bob.setPosition(0, 0);
+		bob.setPosition(0, 0);
+		curiousGeorge.setPosition(0, 0);
+		
+		curiousGeorge.attemptSteal(curiousGeorge.getNearbyPlayer(100));
+		
+		assertTrue(curiousGeorge.hasTargetMoved());
 	}
 
 }

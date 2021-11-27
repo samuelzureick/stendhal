@@ -84,7 +84,15 @@ public class CheekyMonkey extends Pet{
 		return null;
 	}
 	
+	public Player getNearbyPlayer(int range){
+		return null;
+	}
+	
 	public int attemptSteal(Creature c) {
+		return -1;
+	}
+	
+	public int attemptSteal(Player p) {
 		return -1;
 	}
 }
