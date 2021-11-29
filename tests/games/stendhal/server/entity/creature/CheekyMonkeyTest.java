@@ -3,6 +3,8 @@ package games.stendhal.server.entity.creature;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.hamcrest.Matchers.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -93,19 +95,24 @@ public class CheekyMonkeyTest {
 		final Player bob = PlayerTestHelper.createPlayer("bob");
 		final Player ross = PlayerTestHelper.createPlayer("ross");
 		
-		final CheekyMonkey curiousGeorge = new CheekyMonkey(bob);
-		
 		zone.add(bob);
 		zone.add(ross);
-		zone.add(curiousGeorge);
 		
-		bob.setPosition(0, 0);
-		bob.setPosition(0, 0);
-		curiousGeorge.setPosition(0, 0);
+		CheekyMonkey curiousGeorge = new CheekyMonkey(bob);
 		
+		bob.setPosition(5,5);
+		ross.setPosition(5, 5);
+		curiousGeorge.setPosition(1, 1);
+		
+		assertEquals(curiousGeorge.getNearbyPlayer(100), ross);
 		curiousGeorge.attemptSteal(curiousGeorge.getNearbyPlayer(100));
 		
-		assertTrue(curiousGeorge.hasTargetMoved());
+		int[] posBefore = {1, 1};
+		int afterX = curiousGeorge.getX();
+		int afterY = curiousGeorge.getY();
+		int[] posAfter = {afterX, afterY};
+		
+		assertThat(posBefore, not(equalTo(posAfter)));
 	}
 
 }

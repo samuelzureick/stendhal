@@ -1,5 +1,6 @@
 package games.stendhal.server.entity.creature;
 
+import java.util.Arrays;
 //import java.util.Arrays;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class CheekyMonkey extends Pet{
 		DEF = 250;
 		lv_cap = 25;
 		XP = 28900;
-		baseSpeed = 10;
+		baseSpeed = 0.9;
 
 		setAtk(ATK);
 		setDef(DEF);
@@ -43,11 +44,11 @@ public class CheekyMonkey extends Pet{
 		}
 	}
 	
+	
 	@Override
 	protected
 	List<String> getFoodNames() {
-		//return Arrays.asList("ham", "pizza", "meat");
-		return null;
+		return Arrays.asList("ham", "pizza", "meat");
 	}
 	
 	public CheekyMonkey(final Player owner) {
@@ -85,7 +86,18 @@ public class CheekyMonkey extends Pet{
 	}
 	
 	public Player getNearbyPlayer(int range){
-		return null;
+		
+		double squaredDistance = range * range;
+
+		Player chosenP = null;
+		
+		for (final Player p : getZone().getPlayers()) {
+			if ((this.squaredDistance(p) < squaredDistance) && !this.getOwner().equals(p)) {
+				squaredDistance = this.squaredDistance(p);
+				chosenP = p;
+			}
+		}
+		return chosenP;
 	}
 	
 	public int attemptSteal(Creature c) {
@@ -93,6 +105,16 @@ public class CheekyMonkey extends Pet{
 	}
 	
 	public int attemptSteal(Player p) {
-		return -1;
+		setIdea("follow");
+	
+		this.setMovement(p, 0, 0, this.getMovementRange());
+		notifyWorldAboutChanges();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
 	}
 }

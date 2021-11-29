@@ -1104,6 +1104,10 @@ public class Player extends DressedEntity implements UseListener {
 	public boolean hasSheep() {
 		return getPetOwner().hasSheep();
 	}
+	
+	public boolean hasMonkey() {
+		return getPetOwner().hasMonkey();
+	}
 
 	public boolean hasPet() {
 		return getPetOwner().hasPet();
