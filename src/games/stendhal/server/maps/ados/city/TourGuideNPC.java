@@ -2,7 +2,12 @@ package games.stendhal.server.maps.ados.city;
 
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.StendhalRPZone;
+import games.stendhal.server.core.pathfinder.FixedPath;
+import games.stendhal.server.core.pathfinder.Node;
 import games.stendhal.server.entity.npc.SpeakerNPC;
+
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 public class TourGuideNPC implements ZoneConfigurator {
@@ -20,11 +25,14 @@ public class TourGuideNPC implements ZoneConfigurator {
 	
 	private void buildNPC(final StendhalRPZone zone) {
 	    final SpeakerNPC npc = new SpeakerNPC("Mr Guidy") {
-			@Override
-			protected void createPath() {
-	            // NPC does not move
-	            setPath(null);
-	        }
+			 
+	    	 @Override
+	    	 protected void createPath() {
+	    		 List<Node> nodes=new LinkedList<Node>();
+	             nodes.add(new Node(52,116));
+	             nodes.add(new Node(50,116));
+	             setPath(new FixedPath(nodes, true));
+	    	 }
 			
 			@Override
 			protected void createDialog() {
@@ -47,7 +55,7 @@ public class TourGuideNPC implements ZoneConfigurator {
     // set a description for when a player does 'Look'
     npc.setDescription("You see Guidy the tour guide. He can give you tours around the world of Stendhal but it doesn't look like he's set up yet.");
     // Set the initial position to be the first node on the Path you defined above.
-    npc.setPosition(45, 90);
+    npc.setPosition(52, 116);
     npc.initHP(100);
 
     zone.add(npc);   
