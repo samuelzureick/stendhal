@@ -1,208 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2020.06.25" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="1">
  <tileset firstgid="1" name="ground.png" tilewidth="32" tileheight="32" tilecount="33" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/ground.png" trans="ffffff" width="96" height="352"/>
+  <image source="../../tileset/ground/ground.png" trans="ffffff" width="96" height="352"/>
  </tileset>
  <tileset firstgid="34" name="pool.png" tilewidth="32" tileheight="32" tilecount="72" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/water/pool.png" trans="ffffff" width="96" height="768"/>
+  <image source="../../tileset/ground/water/pool.png" trans="ffffff" width="96" height="768"/>
  </tileset>
  <tileset firstgid="106" name="brown_paving.png" tilewidth="32" tileheight="32" tilecount="2" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/brown_paving.png" trans="ffffff" width="64" height="32"/>
+  <image source="../../tileset/ground/brown_paving.png" trans="ffffff" width="64" height="32"/>
  </tileset>
  <tileset firstgid="108" name="ground/brown.png" tilewidth="32" tileheight="32" tilecount="5" columns="5">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/brown.png" trans="ff00ff" width="160" height="32"/>
+  <image source="../../tileset/ground/brown.png" trans="ff00ff" width="160" height="32"/>
  </tileset>
  <tileset firstgid="113" name="wall_brown.png" tilewidth="32" tileheight="32" tilecount="12" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/wall/wall_brown.png" width="96" height="128"/>
+  <image source="../../tileset/building/wall/wall_brown.png" width="96" height="128"/>
  </tileset>
  <tileset firstgid="125" name="pool_straight_edges.png" tilewidth="32" tileheight="32" tilecount="32" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/water/pool_straight_edges.png" trans="ffffff" width="64" height="512"/>
+  <image source="../../tileset/ground/water/pool_straight_edges.png" trans="ffffff" width="64" height="512"/>
  </tileset>
  <tileset firstgid="157" name="hedge.png" tilewidth="32" tileheight="32" tilecount="35" columns="5">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/bush/hedge.png" trans="ffffff" width="160" height="224"/>
+  <image source="../../tileset/plant/bush/hedge.png" trans="ffffff" width="160" height="224"/>
  </tileset>
  <tileset firstgid="192" name="daisy_blue.png" tilewidth="32" tileheight="32" tilecount="8" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/flower/daisy_blue.png" trans="ffffff" width="64" height="128"/>
+  <image source="../../tileset/plant/flower/daisy_blue.png" trans="ffffff" width="64" height="128"/>
  </tileset>
  <tileset firstgid="200" name="pool_corners.png" tilewidth="32" tileheight="32" tilecount="72" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/water/pool_corners.png" trans="ffffff" width="96" height="768"/>
+  <image source="../../tileset/ground/water/pool_corners.png" trans="ffffff" width="96" height="768"/>
  </tileset>
  <tileset firstgid="272" name="stone.png" tilewidth="32" tileheight="32" tilecount="12" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/wall/stone.png" width="96" height="128"/>
+  <image source="../../tileset/building/wall/stone.png" width="96" height="128"/>
  </tileset>
  <tileset firstgid="284" name="grass_edges.png" tilewidth="32" tileheight="32" tilecount="36" columns="12">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/grass_edges.png" trans="ffffff" width="384" height="96"/>
+  <image source="../../tileset/ground/grass_edges.png" trans="ffffff" width="384" height="96"/>
  </tileset>
  <tileset firstgid="320" name="grass_corners.png" tilewidth="32" tileheight="32" tilecount="24" columns="6">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/grass_corners.png" trans="ffffff" width="192" height="128"/>
+  <image source="../../tileset/ground/grass_corners.png" trans="ffffff" width="192" height="128"/>
  </tileset>
  <tileset firstgid="344" name="daisy_white.png" tilewidth="32" tileheight="32" tilecount="8" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/flower/daisy_white.png" trans="ffffff" width="64" height="128"/>
+  <image source="../../tileset/plant/flower/daisy_white.png" trans="ffffff" width="64" height="128"/>
  </tileset>
  <tileset firstgid="352" name="daisy_yellow.png" tilewidth="32" tileheight="32" tilecount="8" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/flower/daisy_yellow.png" trans="ffffff" width="64" height="128"/>
+  <image source="../../tileset/plant/flower/daisy_yellow.png" trans="ffffff" width="64" height="128"/>
  </tileset>
  <tileset firstgid="360" name="daisy_red.png" tilewidth="32" tileheight="32" tilecount="8" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/flower/daisy_red.png" trans="ffffff" width="64" height="128"/>
+  <image source="../../tileset/plant/flower/daisy_red.png" trans="ffffff" width="64" height="128"/>
  </tileset>
  <tileset firstgid="368" name="closed_with_key.png" tilewidth="32" tileheight="32" tilecount="1" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/door/closed_with_key.png" width="32" height="32"/>
+  <image source="../../tileset/building/door/closed_with_key.png" width="32" height="32"/>
  </tileset>
  <tileset firstgid="369" name="cobbled_paving.png" tilewidth="32" tileheight="32" tilecount="1" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/cobbled_paving.png" trans="ffffff" width="32" height="32"/>
+  <image source="../../tileset/ground/cobbled_paving.png" trans="ffffff" width="32" height="32"/>
  </tileset>
  <tileset firstgid="370" name="bushes.png" tilewidth="32" tileheight="32" tilecount="10" columns="5">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/bush/bushes.png" trans="ffffff" width="160" height="64"/>
+  <image source="../../tileset/plant/bush/bushes.png" trans="ffffff" width="160" height="64"/>
  </tileset>
  <tileset firstgid="380" name="stump/rectangular.png" tilewidth="32" tileheight="32" tilecount="4" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/stump/rectangular.png" trans="ffffff" width="64" height="64"/>
+  <image source="../../tileset/plant/stump/rectangular.png" trans="ffffff" width="64" height="64"/>
  </tileset>
  <tileset firstgid="384" name="closed_with_notice.png" tilewidth="32" tileheight="32" tilecount="1" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/door/closed_with_notice.png" width="32" height="32"/>
+  <image source="../../tileset/building/door/closed_with_notice.png" width="32" height="32"/>
  </tileset>
  <tileset firstgid="385" name="tree_fluffy.png" tilewidth="32" tileheight="32" tilecount="12" columns="4">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/tree/tree_fluffy.png" trans="ffffff" width="128" height="96"/>
+  <image source="../../tileset/plant/tree/tree_fluffy.png" trans="ffffff" width="128" height="96"/>
  </tileset>
  <tileset firstgid="397" name="window_left.png" tilewidth="32" tileheight="32" tilecount="2" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/window/window_left.png" width="64" height="32"/>
+  <image source="../../tileset/building/window/window_left.png" width="64" height="32"/>
  </tileset>
  <tileset firstgid="399" name="postbox.png" tilewidth="32" tileheight="32" tilecount="4" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/item/postbox.png" trans="ffffff" width="64" height="64"/>
+  <image source="../../tileset/item/postbox.png" trans="ffffff" width="64" height="64"/>
  </tileset>
  <tileset firstgid="403" name="grey_stone.png" tilewidth="32" tileheight="32" tilecount="4" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/item/statue/grey_stone.png" trans="ff00ff" width="64" height="64"/>
+  <image source="../../tileset/item/statue/grey_stone.png" trans="ff00ff" width="64" height="64"/>
  </tileset>
  <tileset firstgid="407" name="tree_darkgreen.png" tilewidth="32" tileheight="32" tilecount="88" columns="8">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/tree/tree_darkgreen.png" trans="ffffff" width="256" height="352"/>
+  <image source="../../tileset/plant/tree/tree_darkgreen.png" trans="ffffff" width="256" height="352"/>
  </tileset>
  <tileset firstgid="495" name="door_n.png" tilewidth="32" tileheight="32" tilecount="6" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/door/door_n.png" width="96" height="64"/>
+  <image source="../../tileset/building/door/door_n.png" width="96" height="64"/>
  </tileset>
  <tileset firstgid="501" name="grasses.png" tilewidth="32" tileheight="32" tilecount="6" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/grasses.png" trans="ffffff" width="96" height="64"/>
+  <image source="../../tileset/plant/grasses.png" trans="ffffff" width="96" height="64"/>
  </tileset>
  <tileset firstgid="507" name="green.png" tilewidth="32" tileheight="32" tilecount="20" columns="5">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/roof/green.png" width="160" height="128"/>
+  <image source="../../tileset/building/roof/green.png" width="160" height="128"/>
  </tileset>
  <tileset firstgid="527" name="window_long.png" tilewidth="32" tileheight="32" tilecount="3" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/window/window_long.png" width="96" height="32"/>
+  <image source="../../tileset/building/window/window_long.png" width="96" height="32"/>
  </tileset>
  <tileset firstgid="530" name="fence_chunky.png" tilewidth="32" tileheight="32" tilecount="21" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/fence/fence_chunky.png" trans="ffffff" width="96" height="224"/>
+  <image source="../../tileset/building/fence/fence_chunky.png" trans="ffffff" width="96" height="224"/>
  </tileset>
  <tileset firstgid="551" name="window_right.png" tilewidth="32" tileheight="32" tilecount="2" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/window/window_right.png" width="64" height="32"/>
+  <image source="../../tileset/building/window/window_right.png" width="64" height="32"/>
  </tileset>
  <tileset firstgid="553" name="yellow.png" tilewidth="32" tileheight="32" tilecount="20" columns="5">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/roof/yellow.png" width="160" height="128"/>
+  <image source="../../tileset/building/roof/yellow.png" width="160" height="128"/>
  </tileset>
  <tileset firstgid="573" name="closed.png" tilewidth="32" tileheight="32" tilecount="1" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/door/closed.png" width="32" height="32"/>
+  <image source="../../tileset/building/door/closed.png" width="32" height="32"/>
  </tileset>
  <tileset firstgid="574" name="red.png" tilewidth="32" tileheight="32" tilecount="20" columns="5">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/roof/red.png" width="160" height="128"/>
+  <image source="../../tileset/building/roof/red.png" width="160" height="128"/>
  </tileset>
  <tileset firstgid="594" name="banner.png" tilewidth="32" tileheight="32" tilecount="12" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/decoration/banner.png" width="32" height="384"/>
+  <image source="../../tileset/building/decoration/banner.png" width="32" height="384"/>
  </tileset>
  <tileset firstgid="606" name="small_stump.png" tilewidth="32" tileheight="32" tilecount="4" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/stump/small_stump.png" trans="ffffff" width="64" height="64"/>
+  <image source="../../tileset/plant/stump/small_stump.png" trans="ffffff" width="64" height="64"/>
  </tileset>
  <tileset firstgid="610" name="pot_burgundy.png" tilewidth="32" tileheight="32" tilecount="1" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/item/pot/pot_burgundy.png" trans="ffffff" width="32" height="32"/>
+  <image source="../../tileset/item/pot/pot_burgundy.png" trans="ffffff" width="32" height="32"/>
  </tileset>
  <tileset firstgid="611" name="castle.png" tilewidth="32" tileheight="32" tilecount="320" columns="20">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/castle.png" width="640" height="512"/>
+  <image source="../../tileset/building/castle.png" width="640" height="512"/>
  </tileset>
  <tileset firstgid="931" name="longhorn_skull.png" tilewidth="32" tileheight="32" tilecount="6" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/decoration/longhorn_skull.png" width="96" height="64"/>
+  <image source="../../tileset/building/decoration/longhorn_skull.png" width="96" height="64"/>
  </tileset>
  <tileset firstgid="937" name="stump_purple.png" tilewidth="32" tileheight="32" tilecount="4" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/stump/stump_purple.png" trans="ffffff" width="64" height="64"/>
+  <image source="../../tileset/plant/stump/stump_purple.png" trans="ffffff" width="64" height="64"/>
  </tileset>
  <tileset firstgid="941" name="fairypool.png" tilewidth="32" tileheight="32" tilecount="16" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/item/statue/fairypool.png" trans="ff00ff" width="64" height="256"/>
+  <image source="../../tileset/item/statue/fairypool.png" trans="ff00ff" width="64" height="256"/>
  </tileset>
  <tileset firstgid="957" name="chimney_big.png" tilewidth="32" tileheight="32" tilecount="2" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/decoration/chimney_big.png" width="32" height="64"/>
+  <image source="../../tileset/building/decoration/chimney_big.png" width="32" height="64"/>
  </tileset>
  <tileset firstgid="959" name="blue.png" tilewidth="32" tileheight="32" tilecount="20" columns="5">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/roof/blue.png" width="160" height="128"/>
+  <image source="../../tileset/building/roof/blue.png" width="160" height="128"/>
  </tileset>
  <tileset firstgid="979" name="chimney.png" tilewidth="32" tileheight="32" tilecount="2" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/decoration/chimney.png" width="32" height="64"/>
+  <image source="../../tileset/building/decoration/chimney.png" width="32" height="64"/>
  </tileset>
  <tileset firstgid="981" name="collision.png" tilewidth="32" tileheight="32" tilecount="1" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/logic/collision.png" width="32" height="32"/>
+  <image source="../../tileset/logic/collision.png" width="32" height="32"/>
  </tileset>
  <tileset firstgid="982" name="numbers" tilewidth="32" tileheight="32" tilecount="20" columns="2">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/decoration/numbers.png" width="64" height="320"/>
+  <image source="../../tileset/building/decoration/numbers.png" width="64" height="320"/>
  </tileset>
  <tileset firstgid="1002" name="deep pool" tilewidth="32" tileheight="32" tilecount="72" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/water/pool_deep.png" width="96" height="768"/>
+  <image source="../../tileset/ground/water/pool_deep.png" width="96" height="768"/>
  </tileset>
  <tileset firstgid="1074" name="suspension bridge" tilewidth="32" tileheight="32" tilecount="24" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/object/suspension_bridge.png" width="96" height="256"/>
+  <image source="../../tileset/object/suspension_bridge.png" width="96" height="256"/>
  </tileset>
  <tileset firstgid="1098" name="ladder vertical dark" tilewidth="32" tileheight="32" tilecount="3" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/ladder/vertical_dark.png" width="96" height="32"/>
+  <image source="../../tileset/ground/ladder/vertical_dark.png" width="96" height="32"/>
  </tileset>
  <tileset firstgid="1101" name="locust tree" tilewidth="32" tileheight="32" tilecount="20" columns="4">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/plant/tree/locust_tree.png" width="128" height="160"/>
+  <image source="../../tileset/plant/tree/locust_tree.png" width="128" height="160"/>
  </tileset>
  <tileset firstgid="1121" name="blue_paving.png" tilewidth="32" tileheight="32" tilecount="2" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/blue_paving.png" width="32" height="64"/>
+  <image source="../../tileset/ground/blue_paving.png" width="32" height="64"/>
  </tileset>
  <tileset firstgid="1123" name="green_paving.png" tilewidth="32" tileheight="32" tilecount="18" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/green_paving.png" width="96" height="192"/>
+  <image source="../../tileset/ground/green_paving.png" width="96" height="192"/>
  </tileset>
  <tileset firstgid="1141" name="light5x5" tilewidth="32" tileheight="32" tilecount="25" columns="5">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/light/light_5x5.png" width="160" height="160"/>
+  <image source="../../tileset/light/light_5x5.png" width="160" height="160"/>
  </tileset>
  <tileset firstgid="1166" name="doo rlight" tilewidth="32" tileheight="32" tilecount="12" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/light/door_light.png" width="96" height="128"/>
+  <image source="../../tileset/light/door_light.png" width="96" height="128"/>
  </tileset>
  <tileset firstgid="1178" name="lamp" tilewidth="32" tileheight="32" tilecount="3" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/furniture/light/lamp_bronze.png" width="32" height="96"/>
+  <image source="../../tileset/furniture/light/lamp_bronze.png" width="32" height="96"/>
  </tileset>
  <tileset firstgid="1181" name="dim light 7x5" tilewidth="32" tileheight="32" tilecount="35" columns="7">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/light/dim_light_7x5.png" width="224" height="160"/>
+  <image source="../../tileset/light/dim_light_7x5.png" width="224" height="160"/>
  </tileset>
  <tileset firstgid="1216" name="firewood" tilewidth="32" tileheight="32" tilecount="12" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/item/firewood.png" trans="ff00ff" width="96" height="128"/>
+  <image source="../../tileset/item/firewood.png" trans="ff00ff" width="96" height="128"/>
  </tileset>
  <tileset firstgid="1228" name="fishrods" tilewidth="32" tileheight="32" tilecount="12" columns="4">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/item/fishrods.png" trans="ff00ff" width="128" height="96"/>
+  <image source="../../tileset/item/fishrods.png" trans="ff00ff" width="128" height="96"/>
  </tileset>
  <tileset firstgid="1240" name="fish_crates" tilewidth="32" tileheight="32" tilecount="8" columns="4">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/item/food/fish_crates.png" width="128" height="64"/>
+  <image source="../../tileset/item/food/fish_crates.png" width="128" height="64"/>
  </tileset>
  <tileset firstgid="1248" name="ukulele" tilewidth="32" tileheight="32" tilecount="16" columns="4">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/item/instrument/ukulele.png" trans="ff00ff" width="128" height="128"/>
+  <image source="../../tileset/item/instrument/ukulele.png" trans="ff00ff" width="128" height="128"/>
  </tileset>
  <tileset firstgid="1264" name="barrel_flat" tilewidth="32" tileheight="32" tilecount="1" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/item/pot/barrel_flat.png" trans="ff00ff" width="32" height="32"/>
+  <image source="../../tileset/item/pot/barrel_flat.png" trans="ff00ff" width="32" height="32"/>
  </tileset>
  <tileset firstgid="1265" name="wooden_crates" tilewidth="32" tileheight="32" tilecount="6" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/item/pot/wooden_crates.png" trans="ff00ff" width="96" height="64"/>
+  <image source="../../tileset/item/pot/wooden_crates.png" trans="ff00ff" width="96" height="64"/>
  </tileset>
  <tileset firstgid="1271" name="flames" tilewidth="32" tileheight="32" tilecount="6" columns="6">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/furniture/light/flames.png" trans="ff00ff" width="192" height="32"/>
+  <image source="../../tileset/furniture/light/flames.png" trans="ff00ff" width="192" height="32"/>
  </tileset>
  <tileset firstgid="1277" name="small_lamp" tilewidth="32" tileheight="32" tilecount="4" columns="4">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/furniture/light/small_lamp.png" trans="ff00ff" width="128" height="32"/>
+  <image source="../../tileset/furniture/light/small_lamp.png" trans="ff00ff" width="128" height="32"/>
  </tileset>
  <tileset firstgid="1281" name="outhouse" tilewidth="32" tileheight="32" tilecount="12" columns="3">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/building/outhouse.png" trans="ff00ff" width="96" height="128"/>
+  <image source="../../tileset/building/outhouse.png" trans="ff00ff" width="96" height="128"/>
  </tileset>
  <tileset firstgid="1293" name="horizontal_dark.png" tilewidth="32" tileheight="32" tilecount="3" columns="1">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/ground/ladder/horizontal_dark.png" trans="ffffff" width="32" height="96"/>
+  <image source="../../tileset/ground/ladder/horizontal_dark.png" trans="ffffff" width="32" height="96"/>
  </tileset>
  <tileset firstgid="1296" name="yellow_light_5x5" tilewidth="32" tileheight="32" tilecount="25" columns="5">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/light/yellow_light_5x5.png" width="160" height="160"/>
+  <image source="../../tileset/light/yellow_light_5x5.png" width="160" height="160"/>
  </tileset>
  <tileset firstgid="1321" name="dim light 5x5" tilewidth="32" tileheight="32" tilecount="25" columns="5">
-  <image source="../git/stendhal_S1Team11/tiled/tileset/light/dim_light_5x5.png" width="160" height="160"/>
+  <image source="../../tileset/light/dim_light_5x5.png" width="160" height="160"/>
  </tileset>
  <layer id="1" name="0_floor" width="128" height="128">
   <data encoding="base64" compression="gzip">
