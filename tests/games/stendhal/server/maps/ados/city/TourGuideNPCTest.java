@@ -62,7 +62,7 @@ public class TourGuideNPCTest extends ZonePlayerAndNPCTestImpl {
 		guidyEngine.step(player, ConversationPhrases.GREETING_MESSAGES.get(0));
 		
 		//Assert
-		assertEquals("Hi there, I'm the local tour guide", getReply(guidy));
+		assertEquals("Hi there, I'm the local tour guide.", getReply(guidy));
 	}
 	
 	@Test
@@ -120,7 +120,7 @@ public class TourGuideNPCTest extends ZonePlayerAndNPCTestImpl {
 		guidyEngine.step(player, "tour");
 		
 		//Assert
-		assertEquals("Tour's are not available yet, please come back soon when I've got my stall up and running.", getReply(guidy));
+		assertEquals("Tours are not available at the moment, please come back soon when I've got my stall up and running.", getReply(guidy));
 		
 	}
 

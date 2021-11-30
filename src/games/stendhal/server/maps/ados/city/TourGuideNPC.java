@@ -13,18 +13,33 @@ public class TourGuideNPC implements ZoneConfigurator {
 	 * @param	zone		The zone to be configured.
 	 * @param	attributes	Configuration attributes.
 	 */
+	@Override
 	public void configureZone(final StendhalRPZone zone, final Map<String, String> attributes) {
 		buildNPC(zone);
 	}
 	
 	private void buildNPC(final StendhalRPZone zone) {
 	    final SpeakerNPC npc = new SpeakerNPC("Mr Guidy") {
-	    	protected void createPath() {
+			@Override
+			protected void createPath() {
 	            // NPC does not move
 	            setPath(null);
 	        }
+			
+			@Override
+			protected void createDialog() {
+				addGreeting("Hi there, I'm the local tour guide.");
+				//Lets the NPC reply when a player says "job"
+				addJob("I'm responsible for giving tours to new players to explore the wonderful world of Stendhal.");
+				//Lets the NPC reply when a player asks for help
+				addHelp("I'm able to give you tours for a #fee. However, tours are not avaialble yet as I'm working on getting my stall up and running.");
+				//Lets the NPC respond about a special trigger word
+				addReply("tour", "Tours are not available at the moment, please come back soon when I've got my stall up and running.");
+				//use standard goodbye
+				addGoodbye("Bye, make sure to come back soon.");
+			}
 
-	        
+			
 	    };
 	
     // This determines how the NPC will look like. welcomernpc.png is a picture in data/sprites/npc/
