@@ -1,0 +1,46 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f9c30c1c0ad, pid=9881, tid=9897
+#
+# JRE version: OpenJDK Runtime Environment (11.0.9+11) (build 11.0.9+11-Ubuntu-0ubuntu1.20.04)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.9+11-Ubuntu-0ubuntu1.20.04, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x30ad]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/lib/systemd/systemd-coredump %P %u %g %s %t 9223372036854775808 %h" (or dumping to /home/csimage/git/stendhal_S1Team11/core.9881)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:41941 -javaagent:/home/csimage/.eclipse/org.eclipse.platform_4.15.0_1980009725_linux_gtk_x86_64/configuration/org.eclipse.osgi/219/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 games.stendhal.client.update.Starter
+
+Host: AMD Ryzen 5 4500U with Radeon Graphics, 2 cores, 3G, Linux Mint 20 Ulyana
+Time: Tue Nov 30 16:24:08 2021 GMT elapsed time: 691.525623 seconds (0d 0h 11m 31s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f9c28128000):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=9897, stack(0x00007f9c0188e000,0x00007f9c0198f000)]
+
+Stack: [0x00007f9c0188e000,0x00007f9c0198f000],  sp=0x00007f9c0198c1f0,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x30ad]
+C  [libjimage.so+0x3da2]
+C  [libjimage.so+0x42b1]  JIMAGE_FindResource+0xf1
+V  [libjvm.so+0x58d581]
+V  [libjvm.so+0x58fd31]
+V  [libjvm.so+0xd091ad]
+V  [libjvm.so+0xd07d3a]
+V  [libjvm.so+0xd0a2fb]
+V  [libjvm.so+0x63db7e]
+V  [libjvm.so+0x82add6]
+j  jdk.internal.misc.Signal.dispatch(I)V+25 java.base@11.0.9
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x8337a9]
+V  [libjvm.so+0x8327c2]
+V  [libjvm.so+0xb9977e]
+V  [libjvm.so+0xd3ff6f]
+V  [libjvm.so+0xd3c5d0]
