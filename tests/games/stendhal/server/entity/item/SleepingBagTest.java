@@ -24,7 +24,9 @@ public class SleepingBagTest {
 		attributes.put("quantity", "1");
 		attributes.put("max_quantity", "2147483647");
 		attributes.put("menu", "Sleep");
-		final StackableItem bag = new StackableItem("sleeping bag", "misc", "bag01", attributes);
+		attributes.put("frequency", "12");
+		attributes.put("regen", "3");
+		final StackableItem bag = new RestItem("sleeping bag", "misc", "bag01", attributes);
 		assertNotNull("Generated item is not null", bag);
 	}
 	
