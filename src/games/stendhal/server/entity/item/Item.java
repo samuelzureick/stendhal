@@ -247,6 +247,16 @@ public class Item extends PassiveEntity implements TurnListener, EquipListener,
 		entity.addAttribute("owner", Type.STRING, Definition.HIDDEN);
 	}
 
+	/**
+	 * Checks if item is stealable
+	 * @return true if item is stealable and false otherwise
+	 */
+	public boolean isStealable() {
+		if(has("stealable"))
+			return true;
+		else
+			return false;
+	}
 
 	/**
 	 * on which slots may this item be equipped.

@@ -36,6 +36,8 @@ public class BreakableItem extends Item {
 
 	public BreakableItem(String name, String clazz, String subclass, Map<String, String> attributes) {
 		super(name, clazz, subclass, attributes);
+		
+		this.put("stealable", 1);
 	}
 
 	public BreakableItem(final BreakableItem item) {
