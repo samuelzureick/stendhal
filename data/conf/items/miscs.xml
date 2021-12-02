@@ -388,7 +388,7 @@
     <item name="sleeping bag">
     <type class="misc" subclass="bag01" tileid="-1"/>
     <description>You see a sleeping bag.</description>
-    <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
+    <implementation class-name="games.stendhal.server.entity.item.RestItem"/>
     <attributes>
       <quantity value="1"/>
       <max_quantity value="2147483647"/>
