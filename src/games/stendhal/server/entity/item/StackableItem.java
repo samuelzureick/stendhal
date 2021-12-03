@@ -45,6 +45,8 @@ public class StackableItem extends Item implements Stackable<StackableItem> {
 	public StackableItem(final String name, final String clazz, final String subclass,
 			final Map<String, String> attributes) {
 		super(name, clazz, subclass, attributes);
+		
+		this.put("stealable", 1);
 		update();
 	}
 

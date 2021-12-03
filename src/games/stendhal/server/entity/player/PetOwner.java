@@ -36,6 +36,7 @@ public class PetOwner {
 	 * The sheep ID attribute name.
 	 */
 	protected static final String ATTR_SHEEP = "sheep";
+	protected static final String ATTR_MONK = "cheeky monkey";
 
 	private static Logger LOGGER = Logger.getLogger(PetOwner.class);
 
@@ -77,6 +78,10 @@ public class PetOwner {
 
 	public boolean hasSheep() {
 		return player.has(ATTR_SHEEP);
+	}
+	
+	public boolean hasMonkey() {
+		return player.has(ATTR_MONK);
 	}
 
 	public boolean hasPet() {

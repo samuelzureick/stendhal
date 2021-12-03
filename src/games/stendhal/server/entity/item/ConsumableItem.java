@@ -72,6 +72,8 @@ public class ConsumableItem extends StackableItem implements Comparable<Consumab
 
 		left = getAmount();
 		feeder = FeederFactory.get(this);
+		
+		this.put("stealable", 1);
 	}
 
 	/**
