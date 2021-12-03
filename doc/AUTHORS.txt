@@ -203,17 +203,24 @@ Notable contributors:
   · NPCs
 - Lily Nicholson
   · Test Developer
+  . Coder (implemented new features)
 - Celine Tandiono
   · Test Developer
+  . Coder (implemented new features)
 - Eduardt Nica
   · Test Developer
+  . Coder (implemented new features)
 - Awais Ahmed
   · Test Developer
+  . Coder (implemented new features)
 - Peter Hamer
   · Test Developer
+  . Coder (implemented new features)
 - Antonia Holyland
   · Test Developer
+  . Coder (implemented new features)
 - Samuel Zureick
   · Test Developer
+  . Coder (implemented new features)
 
   

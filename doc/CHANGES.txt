@@ -1,6 +1,14 @@
 Changelog
 ---------
 ---------
+
+
+1.37uom
+*world*
+- pets that can now steal from other players (first release)
+- tour guide NPC to give tours around stendhal (first release)
+- sleeping bag to allow players to recover (first release)
+
 1.36uom
 *fixes*
 - fixed solar and glacier centaur susceptibility issues
