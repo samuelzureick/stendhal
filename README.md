@@ -1,3 +1,7 @@
+## PROJECT OVERVIEW
+This is a group project I took part of that involved integrating new features into a large code base, supported by rigorous automated testing and evaluation. 
+The Stendhal game is an open-source mmorpg written in Java.
+
 [![Stendhal Tower](https://arianne-project.org/screens/stendhal/THM_MagicTower98small.jpeg)](https://arianne-project.org/screens/stendhal/MagicTower98.jpg)
 [![Achievements](https://arianne-project.org/screens/stendhal/THM_Achievement_Stendhal98.jpg)](https://arianne-project.org/screens/stendhal/Achievement_Stendhal98.jpg)
 [![Party](https://arianne-project.org/screens/stendhal/THM_raid20110105.jpg)](https://arianne-project.org/screens/stendhal/raid20110105.jpg)&nbsp;&nbsp;&nbsp;[More Images >](https://stendhalgame.org/media/screenshots.html)
